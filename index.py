@@ -2,7 +2,8 @@
 
 # 2. Importez le module et créez une instance d'authentification
 import streamlit as st
-from streamlit_authenticator import Authenticate
+#  from streamlit_authenticator import Authenticate
+import streamlit_authenticator as stauth
 from streamlit_option_menu import option_menu
 
 # import streamlit_authenticator as stauth
@@ -30,7 +31,7 @@ lesDonneesDesComptes = {
 }
 
 
-authenticator = Authenticate(
+authenticator = stauth.Authenticate(
     lesDonneesDesComptes,  # Les données des comptes
     "cookie name",         # Le nom du cookie, un str quelconque
     "cookie key",          # La clé du cookie, un str quelconque
